@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TodoController;
+use App\Http\Controllers\EventController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +15,49 @@ use Illuminate\Support\Facades\Route;
 */
 URL::forceScheme('https');
 
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/todos', function () {
+    return view('todos');
+});
+
+Route::resource('/todos', TodoController::class);
+
+Route::get('/calendar', function () {
+    return view('calendar');
+});
+
+Route::resource('/events', EventController::class);
+
+Route::get('/board', function () {
+    return view('board');
+});
+
+/* Connect to your database */
+
+Route::get('/db-test', function () {
+    try {
+         echo \DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+          echo 'None';
+    }
+});
+
+
+Route::get('/db-migrate', function () {
+    Artisan::call('migrate');
+    echo Artisan::output();
+});
+
+Route::resource('/todos', TodoController::class);
+
+
+
+
+Route::fallback(function () {
+    //
+    return view('404page');
 });
