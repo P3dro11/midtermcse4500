@@ -36,6 +36,10 @@ Route::get('/board', function () {
     return view('board');
 });
 
+Route::resource('/providers.index',function(){
+  return view('providers.index')
+})
+
 /* Connect to your database */
 
 Route::get('/db-test', function () {
