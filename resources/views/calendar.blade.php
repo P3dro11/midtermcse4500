@@ -1,3 +1,6 @@
+@extends('adminlte::page')
+
+@section('title', 'Calendar')
 <!DOCTYPE html>
 <html lang="en">
 <head>
