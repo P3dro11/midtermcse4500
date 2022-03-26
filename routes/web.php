@@ -37,8 +37,8 @@ Route::get('/board', function () {
 });
 
 Route::resource('/providers.index',function(){
-  return view('providers.index')
-})
+  return view('providers.index');
+});
 
 /* Connect to your database */
 
