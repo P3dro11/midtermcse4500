@@ -16,7 +16,7 @@ use App\Http\Controllers\EventController;
 URL::forceScheme('https');
 
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
 });
 
