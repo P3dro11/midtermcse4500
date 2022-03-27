@@ -42,6 +42,7 @@
     <p>Here put the tech support phone number and information
     </p>
   </div>
+  
  <!-- Construct the box with style you want. Here we are using box-danger -->
       <!-- Then add the class direct-chat and choose the direct-chat-* contexual class -->
       <!-- The contextual class should match the box, so we are using direct-chat-danger -->
@@ -65,7 +66,7 @@
                 <span class="direct-chat-name pull-left">Alexander Pierce</span>
                 <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
               </div><!-- /.direct-chat-info -->
-              <img class="direct-chat-img" src="../dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+              <!-- /.direct-chat-img -->
               <div class="direct-chat-text">
                 Is this template really for free? That's unbelievable!
               </div><!-- /.direct-chat-text -->
@@ -77,7 +78,7 @@
                 <span class="direct-chat-name pull-right">Sarah Bullock</span>
                 <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
               </div><!-- /.direct-chat-info -->
-              <img class="direct-chat-img" src="../dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+              <!-- /.direct-chat-img -->
               <div class="direct-chat-text">
                 You better believe it!
               </div><!-- /.direct-chat-text -->
@@ -89,7 +90,7 @@
             <ul class="contacts-list">
               <li>
                 <a href="#">
-                  <img class="contacts-list-img" src="../dist/img/user1-128x128.jpg" alt="Contact Avatar">
+  
                   <div class="contacts-list-info">
                     <span class="contacts-list-name">
                       Count Dracula
