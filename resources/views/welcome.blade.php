@@ -42,9 +42,6 @@
     <p>Here put the tech support phone number and information
     </p>
   </div>
-@stop
-
-@section('content')
  <!-- Construct the box with style you want. Here we are using box-danger -->
       <!-- Then add the class direct-chat and choose the direct-chat-* contexual class -->
       <!-- The contextual class should match the box, so we are using direct-chat-danger -->
@@ -115,6 +112,9 @@
         </div><!-- /.box-footer-->
       </div><!--/.direct-chat -->
 @stop
+
+
+
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
