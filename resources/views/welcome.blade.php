@@ -29,7 +29,10 @@
     <h1 class="w3-xxxlarge w3-text-red"><b>Sales contact information.</b></h1>
 
     <p>We are a Electronic Inc. service that focus on what's best for any electronic equiment and what's best for you!</p>
-    <p>  Here put the sales contact and information. 
+    <p>  This is our sales information.
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
     </p>
   </div>
 
@@ -42,7 +45,7 @@
     <p>Here put the tech support phone number and information
     </p>
   </div>
-  
+
  <!-- Construct the box with style you want. Here we are using box-danger -->
       <!-- Then add the class direct-chat and choose the direct-chat-* contexual class -->
       <!-- The contextual class should match the box, so we are using direct-chat-danger -->
