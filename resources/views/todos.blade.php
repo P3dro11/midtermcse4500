@@ -33,6 +33,7 @@
 <a href="{{ route('todos.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
+
 @section('js')
 <script>
     $(document).ready(function() {
