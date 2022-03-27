@@ -74,7 +74,7 @@
               </div><!-- /.direct-chat-info -->
               <!-- /.direct-chat-img -->
               <div class="direct-chat-text">
-                Is this template really for free? That's unbelievable!
+                Hello, welcome to Electronic Inc.
               </div><!-- /.direct-chat-text -->
             </div><!-- /.direct-chat-msg -->
 
@@ -91,33 +91,6 @@
             </div><!-- /.direct-chat-msg -->
           </div><!--/.direct-chat-messages-->
 
-          <!-- Contacts are loaded here -->
-          <div class="direct-chat-contacts">
-            <ul class="contacts-list">
-              <li>
-                <a href="#">
-  
-                  <div class="contacts-list-info">
-                    <span class="contacts-list-name">
-                      Count Dracula
-                      <small class="contacts-list-date pull-right">2/28/2015</small>
-                    </span>
-                    <span class="contacts-list-msg">How have you been? I was...</span>
-                  </div><!-- /.contacts-list-info -->
-                </a>
-              </li><!-- End Contact Item -->
-            </ul><!-- /.contatcts-list -->
-          </div><!-- /.direct-chat-pane -->
-        </div><!-- /.box-body -->
-        <div class="box-footer">
-          <div class="input-group">
-            <input type="text" name="message" placeholder="Type Message ..." class="form-control">
-            <span class="input-group-btn">
-              <button type="button" class="btn btn-danger btn-flat">Send</button>
-            </span>
-          </div>
-        </div><!-- /.box-footer-->
-      </div><!--/.direct-chat -->
 @stop
 
 
