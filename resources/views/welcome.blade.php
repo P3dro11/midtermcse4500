@@ -5,7 +5,6 @@
 @section('content_header')
   <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" onclick="w3_open()">☰</a>
   <span>Electronic Inc.</span>
 </header>
 @stop
