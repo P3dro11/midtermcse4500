@@ -36,7 +36,7 @@
   </div>
 
 
-  <!-- Services -->
+  <!-- Tech support contact Information -->
   <div class="w3-container" id="services" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Tech support contact information</b></h1>
 
