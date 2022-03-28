@@ -253,7 +253,7 @@ return [
             'icon' => 'fas fa-fw fa-file',
         ],
         [
-            'text' => 'Invoice',
+            'text' => 'Overview of Purchase',
             'url'  => 'calendar',
             'icon' => 'fas fa-fw fa-calendar-alt',
         ],
