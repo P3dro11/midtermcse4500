@@ -243,8 +243,8 @@ return [
         ],
         [
             'text' => 'Home Page',
-            'url' => 'welcome', '/',
-            'icon' => 'fas fa-fw fa-file',
+            'url' => 'home',
+            'icon' => 'fa fa-fw fa-file',
 
         ],
         [
