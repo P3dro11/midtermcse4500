@@ -21,7 +21,7 @@
         <tr>
           <td>{{ $todo->id }}</td>
           <td>{{ $todo->title }}</td>
-          <td><div class="box box-solid box-primary">...</div><div class="progress progress-xs"><div class="progress-bar progress-bar-danger" style="width: {{ $todo->progress }}%"></div></div></td>
+          <td><div class="box box-solid box-primary" style="width: {{ $todo->Todo }}%"></div></div></td>
           <td><a class="btn btn-default btn-sm" href="{{ route('todos.show',['todo'=>$todo->id]) }}">View</a></td>
         </tr>
         @endforeach
