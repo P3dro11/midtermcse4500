@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th style="width: 10px">#</th><th>Task</th><th>Progress</th><th style="width: 40px">Action</th>
+          <th style="width: 10px">#</th><th style="width: 10px">Name</th><th style="width: 10px">Contact Info</th><th style="width: 10px">Quantity</th><th>Services/Software</th><th style="width: 10px">Price</th><th style="width: 40px">Purchase Date</th>
         </tr>
       </thead>
       <tbody>
