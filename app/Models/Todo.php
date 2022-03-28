@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Todo extends Model
 {
     use HasFactory;
-    protected $fillable = ['title','progress'];
+    protected $fillable = ['number','name','contactinfo','quanity','services,software','price','purchasedate'];
 }

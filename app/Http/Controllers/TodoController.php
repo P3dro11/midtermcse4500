@@ -40,13 +40,23 @@ class TodoController extends Controller
     {
         //
         $validated = $request->validate([
-            'title' => 'required',
-            'progress' => 'required',
+            'number' => 'required',
+            'name' => 'required',
+            'contact info' => 'required',
+            'quanity' => 'required',
+            'services,software' => 'required',
+            'price' => 'required',
+            'purchasedate' => 'required',
        ]);
 
        $todo = Todo::create([
-            'title' => $request->title,
-            'progress' => $request->progress,
+            'number' => $request->number,
+            'name' => $request->name,
+            'contactinfo' => $request->contactinfo,
+            'quanity' => $request->quanity,
+            'services,software' => $request->servicesoftware,
+            'price' => $request->price,
+            'purchasedate' => $request->purchasedate,
        ]);
 
        return $this->index();
