@@ -242,6 +242,12 @@ return [
             'text' => 'search',
         ],
         [
+            'text' => 'Home Page',
+            'url' => 'welcome', '/',
+            'icon' => 'fas fa-fw fa-file',
+
+        ],
+        [
             'text' => "Equipment Info",
             'url'  => 'todos',
             'icon' => 'fas fa-fw fa-file',
