@@ -42,7 +42,7 @@ class TodoController extends Controller
         $validated = $request->validate([
             'number' => 'required',
             'name' => 'required',
-            'contact info' => 'required',
+            'contactinfo' => 'required',
             'quanity' => 'required',
             'services,software' => 'required',
             'price' => 'required',
