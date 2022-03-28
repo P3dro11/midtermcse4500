@@ -30,7 +30,7 @@
 
     <p>We are a Electronic Inc. service that focus on what's best for any electronic equiment and what's best for you!</p>
     <p>  This is our sales information.
-      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Indio, US</p>
       <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
       <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
     </p>
@@ -43,7 +43,7 @@
 
     <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
     <p>Here put the tech support phone number and information
-      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Coachella, US</p>
       <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
       <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
     </p>
