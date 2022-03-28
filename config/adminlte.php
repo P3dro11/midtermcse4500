@@ -253,12 +253,12 @@ return [
             'icon' => 'fas fa-fw fa-file',
         ],
         [
-            'text' => 'View Equipment',
+            'text' => 'Invoice',
             'url'  => 'calendar',
             'icon' => 'fas fa-fw fa-calendar-alt',
         ],
         [
-            'text' => 'Board',
+            'text' => 'Hardware specs',
             'url'  => 'board',
             'icon' => 'fas fa-fw fa-columns',
         ],
