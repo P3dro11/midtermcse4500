@@ -13,6 +13,5 @@
   <h2>{{ $todo->quanity; }}</h2>
   <h2>{{ $todo->servicesoftware; }}</h2>
   <h2>{{ $todo->price; }}</h2>
-  <h2>{{ $todo->purchasedate; }}</h2>
-  <div><p>{{ $todo->progress; }}% finished</p></div>
+  <div><p>{{ $todo->purchasedate; }}% finished</p></div>
 @stop
