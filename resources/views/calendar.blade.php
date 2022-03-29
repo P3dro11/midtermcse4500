@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Calendar')
+@section('title', 'Overview of purchase')
 
 @section('content_header')
 <!-- Middle Column -->
