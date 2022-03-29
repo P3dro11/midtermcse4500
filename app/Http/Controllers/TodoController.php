@@ -41,7 +41,7 @@ class TodoController extends Controller
         //
         $validated = $request->validate([
             'number' => 'required',
-            'name' => 'required',
+            'hello' => 'required',
             'contactinfo' => 'required',
             'quanity' => 'required',
             'services,software' => 'required',
@@ -51,7 +51,7 @@ class TodoController extends Controller
 
        $todo = Todo::create([
             'number' => $request->number,
-            'name' => $request->name,
+            'hello' => $request->hello,
             'contactinfo' => $request->contactinfo,
             'quanity' => $request->quanity,
             'services,software' => $request->servicesoftware,

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Homepage')
 
 @section('content_header')
   <!-- Top menu on small screens -->
