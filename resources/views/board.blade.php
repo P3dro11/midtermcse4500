@@ -43,17 +43,7 @@
   <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
   <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
 </div>
-<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-  <h4>Many more to come...</h4><br>
-  <hr class="w3-clear">
-  <p>Thank you for patiently waiting. 
-  </p>
-    <div class="w3-row-padding" style="margin:0 -16px">
-    </div>
-  </div>
-  <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-  <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-</div>
+
 @stop
 
 @section('js')
