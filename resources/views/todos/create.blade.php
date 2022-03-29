@@ -10,7 +10,7 @@
 <form method="post" action="{{ route('todos.store') }}" >
     @csrf
     <x-adminlte-input name="number" type="number" min=0 max=100 label="Number" />
-    <x-adminlte-input name="hello" label="Name" />
+    <x-adminlte-input name="name" label="Name" />
     <x-adminlte-input name="contactinfo" label="Contact Info" />
     <x-adminlte-input name="quanity" type="number" min=0 max=100 label="Quanity" />
     <x-adminlte-input name="services,software" label="Services/Software" />

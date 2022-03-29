@@ -8,7 +8,7 @@
 
 @section('content')
   <h2>{{ $todo->number; }}</h2>
-  <h2>{{ $todo->hello; }}</h2>
+  <h2>{{ $todo->name; }}</h2>
   <h2>{{ $todo->contactinfo; }}</h2>
   <h2>{{ $todo->quanity; }}</h2>
   <h2>{{ $todo->servicesoftware; }}</h2>

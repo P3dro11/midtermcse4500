@@ -51,7 +51,7 @@ class TodoController extends Controller
 
        $todo = Todo::create([
             'number' => $request->number,
-            'hello' => $request->hello,
+            'hello' => $request->name,
             'contactinfo' => $request->contactinfo,
             'quanity' => $request->quanity,
             'services,software' => $request->servicesoftware,
