@@ -15,7 +15,14 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->tinyInteger('number');
+            $table->string('name')->unique();
+            $table->string('contactinfo')->unique();
+            $table->tinyInteger('quanity');
+            $table->string('services,sooftware');
+            $table->tinyInteger('price');
+            $table->string('services,sooftware');
+            $table->rememberToken();
         });
     }
 
