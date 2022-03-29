@@ -248,7 +248,7 @@ return [
 
         ],
         [
-            'text' => "Equipment Info",
+            'text' => "Equipment Purchase",
             'url'  => 'todos',
             'icon' => 'fas fa-fw fa-file',
         ],
