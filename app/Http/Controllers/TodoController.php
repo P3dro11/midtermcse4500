@@ -44,7 +44,7 @@ class TodoController extends Controller
             'hello' => 'required',
             'contactinfo' => 'required',
             'quanity' => 'required',
-            'services,software' => 'required',
+            'servicesoftware' => 'required',
             'price' => 'required',
             'purchasedate' => 'required',
        ]);
@@ -54,7 +54,7 @@ class TodoController extends Controller
             'hello' => $request->name,
             'contactinfo' => $request->contactinfo,
             'quanity' => $request->quanity,
-            'services,software' => $request->servicesoftware,
+            'servicesoftware' => $request->servicesoftware,
             'price' => $request->price,
             'purchasedate' => $request->purchasedate,
        ]);

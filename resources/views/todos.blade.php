@@ -19,8 +19,13 @@
 
         @foreach($todos AS $todo)
         <tr>
-          <td>{{ $todo->id }}</td>
-          <td>{{ $todo->title }}</td>
+          <td>{{ $todo->number }}</td>
+          <td>{{ $todo->name }}</td>
+          <td>{{ $todo->contactinfo }}</td>
+          <td>{{ $todo->quanity }}</td>
+          <td>{{ $todo->servicesoftware }}</td>
+          <td>{{ $todo->price }}</td>
+          <td>{{ $todo->purchasedate }}</td>
           <td><div class="box box-solid box-primary" style="width: {{ $todo->number->name->contactinfo->quanity->servicesoftware->price->purchasedate }}%"></div></div></td>
           <td><a class="btn btn-default btn-sm" href="{{ route('todos.show',['todo'=>$todo->id]) }}">View</a></td>
         </tr>

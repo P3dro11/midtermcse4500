@@ -14,15 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('todos', function (Blueprint $table) {
-            $table->id();
             $table->tinyInteger('number');
             $table->string('name')->unique();
             $table->string('contactinfo')->unique();
             $table->tinyInteger('quanity');
-            $table->string('services,sooftware');
+            $table->string('servicesoftware');
             $table->tinyInteger('price');
-            $table->string('services,sooftware');
-            $table->rememberToken();
+            $table->string('purchasedate');
         });
     }
 
