@@ -134,4 +134,3 @@ class InvoiceController extends Controller
         return redirect('/invoice');
     }
 }
-
