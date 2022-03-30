@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('noteshist', function (Blueprint $table) {
+        Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('equipment_id')->constrained('equipmentinfo')->onDelete('cascade');
-            $table->string('services');
-            $table->string('software');
-            $table->string('updates');
+            $table->date('purchase_date');
+            $table->foreignId('customer_id')->constrained("customers")->onDelete('cascade');;
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('noteshist');
+        Schema::dropIfExists('invoices');
     }
 };

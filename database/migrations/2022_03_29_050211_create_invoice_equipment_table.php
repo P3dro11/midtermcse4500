@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('manuinfo', function (Blueprint $table) {
+        Schema::create('invoice_equipment', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
-            $table->string('dept');
-            $table->string('number');
-            $table->string('email');
+            $table->foreignId('invoice_id')->constrained("invoices")->onDelete('cascade');;
+            $table->foreignId('equipment_id')->constrained("equipments")->onDelete('cascade');;
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('manuinfo');
+        Schema::dropIfExists('invoice_equipment');
     }
 };

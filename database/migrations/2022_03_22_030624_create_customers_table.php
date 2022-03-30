@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,14 +14,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('purchaseinfo', function (Blueprint $table) {
+        Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('invoice_num');
-            $table->string('price');
-            $table->string('purchase_date');
-            $table->foreignId('equipment_id')->constrained("equipmentinfo");
-            $table->foreignId('customer_id')->constrained('customers');
+            $table->string('fullname');
+            $table->string('email');
+            $table->string('phonenumber');
         });
     }
 
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchaseinfo');
+        Schema::dropIfExists('customers');
     }
 };

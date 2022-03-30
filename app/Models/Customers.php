@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Customers extends Model
+class Customer extends Model
 {
     use HasFactory;
-    protected $fillable =['name','number','email'];
-    protected $table = 'customers';
-    
+    protected $fillable = ['fullname','email', 'phonenumber'];
 
-  
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class);
+    }
 }
