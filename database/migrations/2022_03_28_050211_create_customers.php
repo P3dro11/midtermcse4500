@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('equipmentinfo', function (Blueprint $table) {
+        Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('model_year');
-            $table->string('speed');
-            $table->foreignId('manu_id')->constrained('manuinfo');
+            $table->string('number');
+            $table->string('email');
         });
     }
 
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipmentinfo');
+        Schema::dropIfExists('customers');
     }
 };

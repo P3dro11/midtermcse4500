@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('manuinfo', function (Blueprint $table) {
+        Schema::create('noteshist', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
-            $table->string('number');
-            $table->string('email');
+            $table->foreignId('equipment_id')->constrained('equipmentinfo')->onDelete('cascade');
+            $table->string('services');
+            $table->string('software');
+            $table->string('updates');
         });
     }
 
