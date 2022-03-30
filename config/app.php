@@ -167,7 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Kris\LaravelFormBuilder\FormBuilderServiceProvider::class,
         /*
          * Application Service Providers...
          */
