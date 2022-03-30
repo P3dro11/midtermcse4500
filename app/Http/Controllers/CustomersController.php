@@ -5,7 +5,6 @@ use App\Models\Customers;
 
 use Illuminate\Http\Request;
 
-
 class CustomersController extends Controller
 {
     /**
@@ -15,9 +14,8 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        //
-        $customers = Customer::all();
-        return view('customers.list',compact('customers'));
+        $customers = Customers::all();
+        return view('customers.list', compact('customers'));
     }
 
     /**
@@ -28,7 +26,6 @@ class CustomersController extends Controller
     public function create()
     {
         //
-       
     }
 
     /**
@@ -40,9 +37,6 @@ class CustomersController extends Controller
     public function store(Request $request)
     {
         //
-       
-
-       
     }
 
     /**
@@ -54,7 +48,6 @@ class CustomersController extends Controller
     public function show($id)
     {
         //
-        
     }
 
     /**
