@@ -248,15 +248,20 @@ return [
 
         ],
         [
-            'text' => "Equipment Purchase",
-            'url'  => 'todos',
+            'text' => "Manage Purchase Infos",
+            'url'  => 'purchaseinfo',
             'icon' => 'fas fa-fw fa-file',
         ],
         [
-            'text' => 'Overview of Purchase',
-            'url'  => 'calendar',
-            'icon' => 'fas fa-fw fa-calendar-alt',
+            'text' => 'Manage Equipment',
+            'url'  => 'equipment',
+            'icon' => 'fas fa-fw fa-file',
         ],
+        [
+            'text' => 'Manufacturers',
+            'url'  => 'manufacturer',
+            'icon' => 'fas fa-fw fa-file',
+        ],       
         [
             'text' => 'Hardware specs',
             'url'  => 'board',
