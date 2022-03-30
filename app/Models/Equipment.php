@@ -11,9 +11,9 @@ class Equipment extends Model
 
     protected $fillable = [
         'name',
-        'price',
-        'ghz',
-        'ram',
+        'priceoftheitem',
+        'sizeofghz',
+        'sizeofram',
         'category',
         'manufacturer_id'
     ];
