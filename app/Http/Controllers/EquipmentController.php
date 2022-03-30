@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Todo;
 
-class TodoController extends Controller
+class EquipmentinfoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,6 @@ class TodoController extends Controller
     public function index()
     {
         //
-        $todos = Todo::all();
-        return view('todos',compact('todos'));
     }
 
     /**
@@ -27,7 +25,6 @@ class TodoController extends Controller
     public function create()
     {
         //
-        return view('todos.create');
     }
 
     /**
@@ -39,27 +36,6 @@ class TodoController extends Controller
     public function store(Request $request)
     {
         //
-        $validated = $request->validate([
-            'number' => 'required',
-            'hello' => 'required',
-            'contactinfo' => 'required',
-            'quanity' => 'required',
-            'servicesoftware' => 'required',
-            'price' => 'required',
-            'purchasedate' => 'required',
-       ]);
-
-       $todo = Todo::create([
-            'number' => $request->number,
-            'hello' => $request->name,
-            'contactinfo' => $request->contactinfo,
-            'quanity' => $request->quanity,
-            'servicesoftware' => $request->servicesoftware,
-            'price' => $request->price,
-            'purchasedate' => $request->purchasedate,
-       ]);
-
-       return $this->index();
     }
 
     /**
@@ -71,8 +47,6 @@ class TodoController extends Controller
     public function show($id)
     {
         //
-        $todo= Todo::find($id);
-        return view('todos.show',compact('todo'));
     }
 
     /**

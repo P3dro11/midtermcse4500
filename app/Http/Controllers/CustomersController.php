@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Customers;
 
 use Illuminate\Http\Request;
-use App\Models\Todo;
+
 
 class CustomersController extends Controller
 {
