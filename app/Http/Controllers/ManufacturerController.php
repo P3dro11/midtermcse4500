@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Todo;
+use App\Models\Manufacturer;
+use Kris\LaravelFormBuilder\FormBuilder;
+use App\Forms\ManufacturerForm;
 
-class TodoController extends Controller
+class ManufacturerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +16,8 @@ class TodoController extends Controller
      */
     public function index()
     {
-        //
-        $todos = Todo::all();
-        return view('todos',compact('todos'));
+        $manufacturers = Manufacturer::all();
+        return view('manufacturer.list', compact('manufacturers'));
     }
 
     /**
@@ -24,10 +25,13 @@ class TodoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
-        //
-        return view('todos.create');
+        $form = $formBuilder->create(ManufacturerForm::class, [
+            'method' => 'POST',
+            'url' => route('manufacturer.store')
+        ]);
+        return view('manufacturer.create', compact('form'));
     }
 
     /**
@@ -36,30 +40,12 @@ class TodoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormBuilder $formBuilder)
     {
-        //
-        $validated = $request->validate([
-            'number' => 'required',
-            'hello' => 'required',
-            'contactinfo' => 'required',
-            'quanity' => 'required',
-            'servicesoftware' => 'required',
-            'price' => 'required',
-            'purchasedate' => 'required',
-       ]);
-
-       $todo = Todo::create([
-            'number' => $request->number,
-            'hello' => $request->name,
-            'contactinfo' => $request->contactinfo,
-            'quanity' => $request->quanity,
-            'servicesoftware' => $request->servicesoftware,
-            'price' => $request->price,
-            'purchasedate' => $request->purchasedate,
-       ]);
-
-       return $this->index();
+        $form = $formBuilder->create(ManufacturerForm::class);
+        $form->redirectIfNotValid();
+        Manufacturer::create($form->getFieldValues());
+        return $this->index();
     }
 
     /**
@@ -70,9 +56,9 @@ class TodoController extends Controller
      */
     public function show($id)
     {
-        //
-        $todo= Todo::find($id);
-        return view('todos.show',compact('todo'));
+        $manufacturer = Manufacturer::find($id);
+        // Lazy Loading
+        return view('manufacturer.detail', compact('manufacturer'));
     }
 
     /**
@@ -81,9 +67,16 @@ class TodoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id,  FormBuilder $formBuilder)
     {
-        //
+        $manufacturer = Manufacturer::find($id);
+
+        $form = $formBuilder->create(ManufacturerForm::class, [
+            'method' => 'PUT',
+            'url' => route('manufacturer.update', ['manufacturer'=>$manufacturer->id]),
+            'model' => $manufacturer,
+        ]);
+        return view('manufacturer.create', compact('form'));
     }
 
     /**
@@ -93,9 +86,15 @@ class TodoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, FormBuilder $formBuilder)
     {
-        //
+        $form = $formBuilder->create(ManufacturerForm::class);
+        $form->redirectIfNotValid();
+
+        $manufacturer = Manufacturer::find($id);
+        $manufacturer->update($form->getFieldValues());
+
+        return redirect('/manufacturer/' . $id);
     }
 
     /**
@@ -106,6 +105,7 @@ class TodoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Manufacturer::destroy($id);
+        return redirect('/manufacturer');
     }
 }

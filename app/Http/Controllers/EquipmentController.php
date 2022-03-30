@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Todo;
+use App\Models\Equipment;
+use Kris\LaravelFormBuilder\FormBuilder;
+use App\Forms\EquipmentForm;
 
-class EquipmentinfoController extends Controller
+
+class EquipmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +17,8 @@ class EquipmentinfoController extends Controller
      */
     public function index()
     {
-        //
+        $equipments = Equipment::all();
+        return view('equipment.list', compact('equipments'));
     }
 
     /**
@@ -22,9 +26,13 @@ class EquipmentinfoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
-        //
+        $form = $formBuilder->create(EquipmentForm::class, [
+            'method' => 'POST',
+            'url' => route('equipment.store')
+        ]);
+        return view('equipment.create', compact('form'));
     }
 
     /**
@@ -33,9 +41,12 @@ class EquipmentinfoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormBuilder $formBuilder)
     {
-        //
+        $form = $formBuilder->create(EquipmentForm::class);
+        $form->redirectIfNotValid();
+        Equipment::create($form->getFieldValues());
+        return $this->index();
     }
 
     /**
@@ -46,7 +57,8 @@ class EquipmentinfoController extends Controller
      */
     public function show($id)
     {
-        //
+        $equipment = Equipment::find($id);
+        return view('equipment.detail', compact('equipment'));
     }
 
     /**
@@ -55,9 +67,16 @@ class EquipmentinfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, FormBuilder $formBuilder)
     {
-        //
+        $equipment = Equipment::find($id);
+
+        $form = $formBuilder->create(EquipmentForm::class, [
+            'method' => 'PUT',
+            'url' => route('equipment.update', ['equipment'=>$equipment->id]),
+            'model' => $equipment,
+        ]);
+        return view('equipment.create', compact('form'));
     }
 
     /**
@@ -67,9 +86,15 @@ class EquipmentinfoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, FormBuilder $formBuilder)
     {
-        //
+        $form = $formBuilder->create(EquipmentForm::class);
+        $form->redirectIfNotValid();
+
+        $equipment = Equipment::find($id);
+        $equipment->update($form->getFieldValues());
+
+        return redirect('/equipment/' . $id);
     }
 
     /**
@@ -80,6 +105,7 @@ class EquipmentinfoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Equipment::destroy($id);
+        return redirect('/equipment');
     }
 }

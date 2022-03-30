@@ -6,8 +6,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\EquipmentController;
-use App\Http\Controllers\PurchaseinfoController;
-use App\Http\Controllers\NoteshistoryController;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\NotesController;
 
 
 
@@ -33,11 +33,11 @@ Route::get('/', function (){
   return view('welcome');
 });
 
-Route::resource('/customers', CustomersController::class);
+Route::resource('/customer', CustomerController::class);
 Route::resource('/manufacturer', ManufacturerController::class);
 Route::resource('/equipment', EquipmentController::class);
-Route::resource('/purchaseinfo', PurchaseinfoController::class);
-Route::resource('/note', NoteshistoryController::class);
+Route::resource('/invoice', InvoiceController::class);
+Route::resource('/note', NotesController::class);
 
 
 Route::get('/board', function () {

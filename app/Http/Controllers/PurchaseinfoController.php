@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PurchaseinfoController extends Controller
+use App\Models\Notes;
+
+use Kris\LaravelFormBuilder\FormBuilder;
+use App\Forms\NotesForm;
+
+class NotesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,9 +26,18 @@ class PurchaseinfoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(FormBuilder $formBuilder, Request $request)
     {
-        //
+        $form = $formBuilder->create(NotesForm::class, [
+            'method' => 'POST',
+            'url' => route('note.store')
+        ]);
+
+        $equipment = $request->get('equipment', -1);
+        $form->modify('equipment_id', "number", [
+            'default_value' => $equipment,
+        ]);
+        return view('note.create', compact('form'));
     }
 
     /**
@@ -32,9 +46,12 @@ class PurchaseinfoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FormBuilder $formBuilder)
     {
-        //
+        $form = $formBuilder->create(NotesForm::class);
+        $form->redirectIfNotValid();
+        $note = Notes::create($form->getFieldValues());
+        return redirect("equipment/" . $note->equipment->id);
     }
 
     /**
@@ -45,7 +62,8 @@ class PurchaseinfoController extends Controller
      */
     public function show($id)
     {
-        //
+        $note = Notes::find($id);
+        return view('note.detail', compact('note'));
     }
 
     /**
@@ -79,6 +97,9 @@ class PurchaseinfoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $note = Notes::find($id);
+        $returnId = $note->equipment->id;
+        Notes::destroy($id);
+        return redirect('/equipment/' . $returnId);
     }
 }
