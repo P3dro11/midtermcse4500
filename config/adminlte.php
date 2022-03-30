@@ -248,11 +248,16 @@ return [
 
         ],
         [
-            'text' => "Manage Purchase Infos",
-            'url'  => 'purchaseinfo',
+            'text' => 'Manage Invoices',
+            'url'  => 'invoice',
             'icon' => 'fas fa-fw fa-file',
         ],
         [
+            'text' => 'Manage Customers',
+            'url'  => 'customer',
+            'icon' => 'fas fa-fw fa-file',
+        ],
+        [         
             'text' => 'Manage Equipment',
             'url'  => 'equipment',
             'icon' => 'fas fa-fw fa-file',
@@ -261,7 +266,7 @@ return [
             'text' => 'Manufacturers',
             'url'  => 'manufacturer',
             'icon' => 'fas fa-fw fa-file',
-        ],       
+        ],   
         [
             'text' => 'Hardware specs',
             'url'  => 'board',

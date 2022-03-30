@@ -24,6 +24,14 @@ use App\Http\Controllers\NotesController;
 
 URL::forceScheme('https');
 
+Route::resource('/customer', CustomerController::class);
+Route::resource('/manufacturer', ManufacturerController::class);
+Route::resource('/equipment', EquipmentController::class);
+Route::resource('/invoice', InvoiceController::class);
+Route::resource('/note', NotesController::class);
+
+Route::delete('/invoice/{invoiceID}/{itemID}', [InvoiceController::class, 'deleteItem'])->name('equipment.deleteItem');
+Route::post('/invoice/{invoiceID}/{itemID}', [InvoiceController::class, 'addItem'])->name('equipment.addItem');
 
 Route::get('/home', function () {
     return view('welcome');
@@ -32,12 +40,6 @@ Route::get('/home', function () {
 Route::get('/', function (){ 
   return view('welcome');
 });
-
-Route::resource('/customer', CustomerController::class);
-Route::resource('/manufacturer', ManufacturerController::class);
-Route::resource('/equipment', EquipmentController::class);
-Route::resource('/invoice', InvoiceController::class);
-Route::resource('/note', NotesController::class);
 
 
 Route::get('/board', function () {
