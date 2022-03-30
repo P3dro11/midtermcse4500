@@ -13,13 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('equipmentinfo', function (Blueprint $table) {
+        Schema::create('equipments', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
-            $table->string('model_year');
-            $table->string('speed');
-            $table->foreignId('manu_id')->constrained('manuinfo');
+            $table->string("name");
+            $table->string("price");
+            $table->string("ghz");
+            $table->string("ram");
+            $table->enum('category', ['desktop', 'laptop', 'tablet']);
+            $table->foreignId('manufacturer_id')->constrained("manufacturers")->onDelete('cascade');;
+
         });
     }
 
@@ -30,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipmentinfo');
+        Schema::dropIfExists('equipments');
     }
 };

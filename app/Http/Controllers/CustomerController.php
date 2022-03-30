@@ -104,3 +104,4 @@ class CustomerController extends Controller
         Customer::destroy($id);
         return redirect('/customer');
     }
+}
