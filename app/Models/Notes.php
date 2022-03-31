@@ -10,9 +10,9 @@ class Notes extends Model
     use HasFactory;
 
     protected $fillable = [
-        'service',
-        'software',
-        'content',
+        'service_note',
+        'software_note',
+        'content_note',
         'equipment_id'
     ];
     protected $table = "note";
