@@ -15,16 +15,16 @@
         </div>
         <dl class="row">
             <dt class="col-sm-3">Tech Email</dt>
-            <dd class="col-sm-9">{{ $manufacturer->temail }}</dd>
+            <dd class="col-sm-9">{{ $manufacturer->tech_email }}</dd>
 
             <dt class="col-sm-3">Tech Phone Number</dt>
-            <dd class="col-sm-9">{{ $manufacturer->tphone }}</dd>
+            <dd class="col-sm-9">{{ $manufacturer->tech_phone }}</dd>
 
             <dt class="col-sm-3">Sales Email</dt>
-            <dd class="col-sm-9">{{ $manufacturer->semail }}</dd>
+            <dd class="col-sm-9">{{ $manufacturer->sales_email }}</dd>
 
             <dt class="col-sm-3">Sales Phone Number</dt>
-            <dd class="col-sm-9">{{ $manufacturer->sphone }}</dd>
+            <dd class="col-sm-9">{{ $manufacturer->sales_phone }}</dd>
         </dl>
     </div>
     <span style="float:right;">

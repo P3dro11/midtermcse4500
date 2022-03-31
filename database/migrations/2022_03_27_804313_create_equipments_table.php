@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string("name");
-            $table->string("priceoftheitem");
-            $table->string("sizeofghz");
-            $table->string("sizeofram");
-            $table->enum('category', ['desktop', 'laptop', 'tablet','phone']);
+            $table->string("price");
+            $table->string("ghz");
+            $table->string("ram");
+            $table->enum('category', ['desktop', 'laptop', 'tablet']);
             $table->foreignId('manufacturer_id')->constrained("manufacturers")->onDelete('cascade');;
 
         });

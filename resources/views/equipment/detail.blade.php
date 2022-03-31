@@ -15,7 +15,7 @@
         </div>
         <dl class="row">
             <dt class="col-sm-3">Price</dt>
-            <dd class="col-sm-9">${{ $equipment->priceoftheitem }}</dd>
+            <dd class="col-sm-9">${{ $equipment->price }}</dd>
 
             <dt class="col-sm-3">Manufacturer</dt>
             <dd class="col-sm-9">
@@ -25,10 +25,10 @@
             </dd>
 
             <dt class="col-sm-3">GHz</dt>
-            <dd class="col-sm-9">{{ $equipment->sizeofghz }}</dd>
+            <dd class="col-sm-9">{{ $equipment->ghz }}</dd>
 
             <dt class="col-sm-3">Ram</dt>
-            <dd class="col-sm-9">{{ $equipment->sizeofram }}</dd>
+            <dd class="col-sm-9">{{ $equipment->ram }}</dd>
 
             <dt class="col-sm-3">Category</dt>
             <dd class="col-sm-9">{{ ucwords($equipment->category) }}</dd>
@@ -60,9 +60,9 @@
         @foreach($equipment->notes AS $note)
         <tr>
             <td>{{ $note->id }}</td>
-            <td>{{ $note->service_note }}</td>
-            <td>{{ $note->software_note }}</td>
-            <td>{{ $note->content_note }}</td>
+            <td>{{ $note->service }}</td>
+            <td>{{ $note->software }}</td>
+            <td>{{ $note->content }}</td>
 
             <td>
                 <span>

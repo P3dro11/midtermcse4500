@@ -10,9 +10,9 @@ class Notes extends Model
     use HasFactory;
 
     protected $fillable = [
-        'service_note',
-        'software_note',
-        'content_note',
+        'service',
+        'software',
+        'content',
         'equipment_id'
     ];
     protected $table = "note";
@@ -22,4 +22,3 @@ class Notes extends Model
         return $this->belongsTo(Equipment::class);
     }
 }
-

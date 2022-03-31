@@ -11,10 +11,10 @@ class Manufacturer extends Model
 
     protected $fillable = [
         'name',
-        'temail',
-        'tphone',
-        'semail',
-        'sphone'
+        'tech_email',
+        'tech_phone',
+        'sales_email',
+        'sales_phone'
     ];
 
     public function equipments()
