@@ -40,4 +40,3 @@ class Equipment extends Model
         return $this->belongsToMany(Invoice::class, 'invoice_equipment')->distinct();;
     }
 }
-

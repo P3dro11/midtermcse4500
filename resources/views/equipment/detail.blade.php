@@ -3,7 +3,7 @@
 @section('title', 'Equipment')
 
 @section('content_header')
-    <h1>Equipment Info</h1>
+    <h1>Equipment</h1>
 @stop
 
 @section('content')
@@ -24,13 +24,13 @@
                 </a>
             </dd>
 
-            <dt class="col-sm-3">GHz/speed</dt>
+            <dt class="col-sm-3">GHz</dt>
             <dd class="col-sm-9">{{ $equipment->ghz }}</dd>
 
-            <dt class="col-sm-3">Ram/memory</dt>
+            <dt class="col-sm-3">Ram</dt>
             <dd class="col-sm-9">{{ $equipment->ram }}</dd>
 
-            <dt class="col-sm-3">Category/Built</dt>
+            <dt class="col-sm-3">Category</dt>
             <dd class="col-sm-9">{{ ucwords($equipment->category) }}</dd>
         </dl>
     </div>
