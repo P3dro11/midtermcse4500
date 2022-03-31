@@ -15,15 +15,15 @@
         </div>
         <dl class="row">
             <dt class="col-sm-3">Service</dt>
-            <dd class="col-sm-9">{{ $note->service_note }}</dd>
+            <dd class="col-sm-9">{{ $note->service }}</dd>
 
             <dt class="col-sm-3">Software</dt>
             <dd class="col-sm-9">
-                    {{ $note->software_note }}
+                    {{ $note->software }}
 
             </dd>
             <dt class="col-sm-3">Content</dt>
-            <dd class="col-sm-9">{{ $note->content_note }}</dd>
+            <dd class="col-sm-9">{{ $note->content }}</dd>
 
         </dl>
     </div>
