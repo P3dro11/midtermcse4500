@@ -30,7 +30,7 @@
     <span style="float:right;">
         <a href="{{ route('note.destroy',['note'=>$note->id]) }}" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('submit-form').submit();">
         Delete</a>
-        <!-- This is ugly but who even cares anymore -->
+       
         <form id="submit-form" action="{{ route('note.destroy',['note'=>$note->id]) }}" method="POST" class="hidden">
             @csrf
             @method('DELETE')

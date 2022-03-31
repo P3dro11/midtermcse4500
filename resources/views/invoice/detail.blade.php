@@ -35,7 +35,7 @@
         <a href="{{ route('invoice.edit', ['invoice'=>$invoice->id]) }} " class="btn btn-warning">Update</a>
         <a href="{{ route('invoice.destroy',['invoice'=>$invoice->id]) }}" class="btn btn-danger" onclick="event.preventDefault(); document.getElementById('submit-form').submit();">
         Delete</a>
-        <!-- This is ugly but who even cares anymore -->
+        
         <form id="submit-form" action="{{ route('invoice.destroy',['invoice'=>$invoice->id]) }}" method="POST" class="hidden">
             @csrf
             @method('DELETE')
