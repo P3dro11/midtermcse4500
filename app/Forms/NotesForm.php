@@ -14,7 +14,7 @@ class NotesForm extends Form
             ->add('equipment_id', Field::NUMBER, [
                 'rules' => 'required',
                 'label' => 'Equipment ID',
-                'attr' => ['readonly' => 'true'],
+              
             ])
             ->add('service', Field::TEXT, [
                 'rules' => 'required',
