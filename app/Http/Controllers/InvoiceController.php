@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Invoice;
-use App\Models\Equipment;
+
 
 use Kris\LaravelFormBuilder\FormBuilder;
 use App\Forms\InvoiceForm;
