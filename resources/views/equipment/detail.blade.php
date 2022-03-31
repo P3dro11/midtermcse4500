@@ -24,13 +24,13 @@
                 </a>
             </dd>
 
-            <dt class="col-sm-3">GHz</dt>
+            <dt class="col-sm-3">GHz/speed</dt>
             <dd class="col-sm-9">{{ $equipment->ghz }}</dd>
 
-            <dt class="col-sm-3">Ram</dt>
+            <dt class="col-sm-3">Ram/memory</dt>
             <dd class="col-sm-9">{{ $equipment->ram }}</dd>
 
-            <dt class="col-sm-3">Category</dt>
+            <dt class="col-sm-3">Category/Built</dt>
             <dd class="col-sm-9">{{ ucwords($equipment->category) }}</dd>
         </dl>
     </div>
